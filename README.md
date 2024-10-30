@@ -4,15 +4,10 @@ Este documento contém uma lista de comandos úteis para gerenciar contêineres 
 
 ## Deletar volumes - OBS! Os volumes nao podem estar sendo usados por nenhum Container ativo
 
-Para remover volumes que não estão mais em uso, você pode usar o seguinte comando:
-
-```bash
-docker volume prune
-```
-
 Se você quiser remover um volume específico, utilize:
 
 ```bash
+docker volume ls
 docker volume rm nome_do_volume
 ```
 
@@ -45,6 +40,12 @@ docker-compose up -d
 ## Pausar Containers
 
 Para pausar todos os contêineres em execução, use:
+
+```bash
+docker compose down
+```
+
+ou pausar todos
 
 ```bash
 docker pause $(docker ps -q)
